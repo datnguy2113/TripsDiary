@@ -1,7 +1,7 @@
 
 
 const createDiary = async (name: string, accessToken: string) => {
-    await fetch(import.meta.env.VITE_SERVER_ORIGIN + "/diary", {
+    const response = await fetch(import.meta.env.VITE_SERVER_ORIGIN + "/diary", {
         method: "Post",
         headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -11,6 +11,9 @@ const createDiary = async (name: string, accessToken: string) => {
             diaryName: name
         })
     });
+    if (response.ok) {
+        return (await response.text());
+    }
 };
 
 export default createDiary;
