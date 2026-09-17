@@ -3,6 +3,7 @@ import CreateDiaryPortal from "../components/CreateDiaryPortal";
 import getDiaries, { type Diary } from "../utils/getDiaries";
 import AuthContext from "../contexts/AuthContext";
 import DiaryComponent from "../components/diary/DiaryComponent";
+import Button from "../components/button/Button";
 
 
 const TravelDiaryPage = () => {
@@ -65,7 +66,19 @@ const TravelDiaryPage = () => {
                 <div className="self-stretch flex flex-col gap-5">
                     <div className="flex justify-between">
                         <p className="font-bold text-[1.5rem] text-blue_400">Your Diaries</p>
-                        <button 
+                        <Button   
+                        >
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                viewBox="0 0 640 640"
+                                className="w-[2rem]"
+                            >
+                                <path 
+                                    fill="#ecf7f9" 
+                                    d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
+                            </svg>
+                        </Button>
+                        {/* <button 
                             className="bg-blue_400 px-[2em] rounded-[1em] cursor-pointer"
                             onClick={() => setShowCreatePortal(true)}
                         >
@@ -78,7 +91,7 @@ const TravelDiaryPage = () => {
                                     fill="#ecf7f9" 
                                     d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
                             </svg>
-                        </button>
+                        </button> */}
                     </div>
                     <div className="flex flex-col gap-5">
                         
