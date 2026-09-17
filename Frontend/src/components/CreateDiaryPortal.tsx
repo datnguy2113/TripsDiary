@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { useContext, useEffect, useRef, useState } from "react";
 import createDiary from "../utils/createDiary";
 import AuthContext from "../contexts/AuthContext";
+import Button from "./button/Button";
+import { useNavigate } from "react-router-dom";
 
 type CreateDiaryPortalType = {
     isShow: boolean,
@@ -12,6 +14,7 @@ const CreateDiaryPortal = ({isShow}: CreateDiaryPortalType) => {
     const [name, setName] = useState<string>("");
     const container = useRef<HTMLDivElement | null>(null);
     const authContext = useContext(AuthContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (isShow) {
@@ -49,15 +52,21 @@ const CreateDiaryPortal = ({isShow}: CreateDiaryPortalType) => {
                     placeholder="Name of your diary"
                 />
             </div>
-            <button 
-                className="bg-blue_400 self-stretch py-[.5em] font-bold text-[1em] rounded-[.5em] text-blue_50 cursor-pointer"
+            <Button
                 disabled={name === ""}    
+                style={
+                    {
+                        alignSelf: "stretch",
+                        opacity: name === "" ? 0.5 : 1
+                    }
+                }
                 onClick={async () => {
-                   await createDiary(name, authContext?.accessToken as string);
+                   const diaryId = await createDiary(name, authContext?.accessToken as string);
+                   navigate(`/diary/edit?id=${diaryId}`);
                 }}
             >
-                Create
-            </button>
+                <p className="font-bold text-white">Create</p>
+            </Button>
         </div>
     );
 };
