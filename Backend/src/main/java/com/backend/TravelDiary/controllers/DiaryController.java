@@ -27,12 +27,12 @@ public class DiaryController {
 
 
   @PostMapping("/diary")
-  public ResponseEntity<Diary> createDiary(@RequestBody CreateDiaryRequest request,
+  public ResponseEntity<String> createDiary(@RequestBody CreateDiaryRequest request,
                                            @CurrentSecurityContext(expression = "authentication?.name") String email
                                           ) {
     User user = (User) this.userService.loadUserByUsername(email);
     Diary newDiary = this.diaryService.createDiary(request.getDiaryName(), user);
-    return ResponseEntity.status(HttpStatus.CREATED).body(newDiary);
+    return ResponseEntity.status(HttpStatus.CREATED).body(newDiary.getDiaryId());
   }
 
   @GetMapping("/diary")
