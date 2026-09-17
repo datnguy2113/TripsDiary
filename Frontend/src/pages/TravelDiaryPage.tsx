@@ -23,7 +23,7 @@ const TravelDiaryPage = () => {
     return (
         <div className="grow flex items-center py-[2em] flex-col">
             <div className="flex flex-col gap-8">
-                <div className="bg-blue_200 flex items-center justify-center rounded-[1.5em]">
+                <div className="bg-blue_400 flex items-center justify-center rounded-[1.5em]">
                     <div className="font-bold text-[1.5rem] text-blue_50 border-black self-center px-[1em]">
                         A way to rewind your great adventure
                     </div>

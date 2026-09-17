@@ -66,7 +66,7 @@ const VehicleOption = ({vehicle, handleVehicleChange}: {
         }
         else {
             tl.current.to(container.current, {
-                backgroundColor: "#0C2327"
+                backgroundColor: "#64BECE"
             }).to(iconRef.current, {
                 attr: {
                     fill: "#ECF7F9"
@@ -88,7 +88,7 @@ const VehicleOption = ({vehicle, handleVehicleChange}: {
             onMouseOver={() => setIsHover(true)}
             onMouseOut={() => setIsHover(false)}
             onClick={() => handleVehicleChange(vehicle)}
-            className="bg-blue_950 p-[0.5em] rounded-[.5em] cursor-pointer"
+            className="bg-blue_400 p-[0.5em] rounded-[.5em] cursor-pointer"
         >
             {icon}
         </div>

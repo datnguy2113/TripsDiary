@@ -14,7 +14,7 @@ const ProfilePage = () => {
     return (
         <div className="grow flex items-center py-[2em] flex-col">
             <div className="flex flex-col gap-5">
-                <div className="bg-blue_200 flex gap-[20em] p-[2em] rounded-[2em]">
+                <div className="bg-blue_400 flex gap-[20em] p-[2em] rounded-[2em]">
                     <div className="flex gap-5">
                         <div className="flex items-center gap-1">
                             <svg 
@@ -49,7 +49,7 @@ const ProfilePage = () => {
                         </div>
                         
                     </div>
-                    <div className="text-[6rem] font-bold bg-blue_50 text-blue_200 w-[2em] h-[2em] rounded-[50%] flex items-center justify-center">
+                    <div className="text-[6rem] font-bold bg-blue_50 text-blue_400 w-[2em] h-[2em] rounded-[50%] flex items-center justify-center">
                         <p>{initial}</p>
                     </div>
                 </div>
