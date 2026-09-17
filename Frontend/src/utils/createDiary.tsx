@@ -11,7 +11,7 @@ const createDiary = async (name: string, accessToken: string) => {
             diaryName: name
         })
     });
-    if (response.ok) {
+     if (response.ok) {
         return (await response.text());
     }
 };
