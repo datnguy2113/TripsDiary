@@ -67,6 +67,7 @@ const TravelDiaryPage = () => {
                     <div className="flex justify-between">
                         <p className="font-bold text-[1.5rem] text-blue_400">Your Diaries</p>
                         <Button   
+                            onClick={() => setShowCreatePortal(true)}
                         >
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
