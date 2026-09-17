@@ -92,7 +92,7 @@ const TravelMap = ({spotList}: {spotList: SpotList}) => {
                                 'line-join': 'round'
                             },
                             'paint': {
-                                'line-color': '#3887be',
+                                'line-color': '#64BECE',
                                 'line-width': 5,
                             }
                         });
@@ -127,7 +127,7 @@ const TravelMap = ({spotList}: {spotList: SpotList}) => {
                                     'line-join': 'round'
                                 },
                                 'paint': {
-                                    'line-color': '#3887be',
+                                    'line-color': '#64BECE',
                                     'line-width': 5,
                                 }
                             });
@@ -251,7 +251,7 @@ const TravelMap = ({spotList}: {spotList: SpotList}) => {
                     type: "line",
                     source: `${SOURCE_NAME}-${i}`,
                     layout: { "line-cap": "round", "line-join": "round" },
-                    paint: { "line-color": "#3887be", "line-width": 5 }
+                    paint: { "line-color": "#64BECE", "line-width": 5 }
                 });
 
                 const velocity = 1000;
@@ -332,7 +332,7 @@ const TravelMap = ({spotList}: {spotList: SpotList}) => {
                     type: "line",
                     source: `driving-${i}`,
                     layout: { "line-cap": "round", "line-join": "round" },
-                    paint: { "line-color": "#3887be", "line-width": 5 }
+                    paint: { "line-color": "#64BECE", "line-width": 5 }
                 });
 
                 const totalLength = (routeMap.current.get(`driving-${i}`)?.distance as number)/1000;
