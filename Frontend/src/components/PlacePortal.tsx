@@ -8,6 +8,7 @@ import type { SpotList } from "../features/SpotRender/SpotList";
 import { useSearchParams } from "react-router-dom";
 import addPlaceToDiary from "../utils/addPlaceToDiary";
 import AuthContext from "../contexts/AuthContext";
+import Button from "./button/Button";
 
 const VEHICLES: Transportation[] = ["driving", "flying", "walking"];
 
@@ -92,7 +93,7 @@ const PlacePortal = ({isShow, handleShow}: PlacePortalType) => {
                 </svg>
             </button>
             <form 
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-6"
                 onSubmit={handleSubmit}
             >
                 <div className="flex flex-col gap-4">
@@ -145,17 +146,9 @@ const PlacePortal = ({isShow, handleShow}: PlacePortalType) => {
                         ))}
                     </div>
                 </div>
-                <button 
-                    className="bg-blue_400
-                                 font-bold 
-                                 text-[1rem] 
-                                 text-blue_50 
-                                 cursor-pointer
-                                 p-[0.5em] 
-                                 rounded-[.5em]"
-                >
-                    Save
-                </button>
+                <Button>
+                    <p className="font-bold text-blue-50">Save</p>
+                </Button>
             </form>
 
         </div>
