@@ -108,9 +108,10 @@ const PlacePortal = ({isShow, handleShow}: PlacePortalType) => {
                     </label>
                     <div className="self-stretch relative">
                         <input
+                            placeholder="Your next destination"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
-                            className="bg-blue_400 text-[1rem] p-[0.5em] rounded-[.5em] text-white w-full"
+                            className="bg-blue_400 text-[1rem] p-[0.5em] rounded-[.5em] text-white w-full font-bold"
                         />
                         <svg 
                             xmlns="http://www.w3.org/2000/svg" 
