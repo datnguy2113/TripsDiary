@@ -6,6 +6,7 @@
 
 body {
     background-color: #ECF7F9;
+    overflow: hidden;
 }
 @theme {
     --color-blue_50: #ECF7F9;
