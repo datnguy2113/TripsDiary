@@ -138,9 +138,10 @@ const EditDiaryPage = () => {
             <SpotListContext
                 value={spotListContextValue}
             >
-                <div className="flex py-[1em] items-center justify-center pr-[1em]">
-                    <div className="w-[22vw] h-screen flex flex-col gap-6 overflow-scroll items-center">
-                        <button className="w-[3rem] cursor-pointer"
+                <div className="flex pr-[1em]">
+                    <div className="w-[22vw] flex flex-col gap-6 items-center py-[2em]">
+                        <button 
+                            className="w-[3rem] cursor-pointer"
                             ref={plusButton}
                             onMouseOver={() => setPlusButtonHover(true)}
                             onMouseOut={() => setPlusButtonHover(false)}
@@ -156,9 +157,11 @@ const EditDiaryPage = () => {
                                 <path className="fill-blue_400" d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM296 408L296 344L232 344C218.7 344 208 333.3 208 320C208 306.7 218.7 296 232 296L296 296L296 232C296 218.7 306.7 208 320 208C333.3 208 344 218.7 344 232L344 296L408 296C421.3 296 432 306.7 432 320C432 333.3 421.3 344 408 344L344 344L344 408C344 421.3 333.3 432 320 432C306.7 432 296 421.3 296 408z"/>
                             </svg>
                         </button>
-                        <DiaryList
-                            spotList={spotList}
-                        />
+                        <div className="h-screen overflow-scroll items-center">
+                            <DiaryList
+                                spotList={spotList}
+                            />
+                        </div>
                     </div>
                     <div className="w-[70vw] h-screen">
                         <TravelMap
