@@ -22,7 +22,7 @@ const TravelDiaryPage = () => {
     }, [authContext]);
     
     return (
-        <div className="grow flex items-center py-[2em] flex-col">
+        <div className="grow flex items-center py-[2em] flex-col h-screen overflow-scroll">
             <div className="flex flex-col gap-8">
                 <div className="bg-blue_400 flex items-center justify-center rounded-[1.5em]">
                     <div className="font-bold text-[1.5rem] text-blue_50 border-black self-center px-[1em]">
@@ -80,7 +80,7 @@ const TravelDiaryPage = () => {
                             </svg>
                         </Button>
                     </div>
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 overflow-scroll">
                         
                         {diaries && diaries.map(diary => (
                             <DiaryComponent
