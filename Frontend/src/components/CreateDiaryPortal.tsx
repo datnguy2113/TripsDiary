@@ -13,7 +13,6 @@ type CreateDiaryPortalType = {
 const CreateDiaryPortal = ({isShow, handleIsShow}: CreateDiaryPortalType) => {
     const [name, setName] = useState<string>("");
     const container = useRef<HTMLDivElement | null>(null);
-    const hider = useRef<HTMLDivElement | null>(null);
     const authContext = useContext(AuthContext);
     const tl = useRef<GSAPTimeline | null>(null);
     const navigate = useNavigate();
