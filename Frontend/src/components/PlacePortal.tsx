@@ -19,7 +19,6 @@ type PlacePortalType = {
 
 const PlacePortal = ({isShow, handleShow}: PlacePortalType) => {
     const portalRef = useRef<HTMLDivElement | null>(null);
-    const hider = useRef<HTMLDivElement | null>(null);
     const [query, setQuery] = useState<string>("");
     const [vehicle, setVehicle] = useState<Transportation | null>(null);
     const spotListContext = useContext(SpotListContext);
@@ -76,7 +75,6 @@ const PlacePortal = ({isShow, handleShow}: PlacePortalType) => {
                     }
                 }
                 onClick={() => handleShow(false)}
-                ref={hider} 
                 className="w-screen h-screen bg-black top-0 left-0 fixed z-[100] opacity-50"></div>
             <div    className="fixed 
                             top-1/2 
